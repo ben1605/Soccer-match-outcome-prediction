@@ -62,9 +62,6 @@ As we can see, except for the coefficients of one home player, all other coeffic
 ### <i class="icon-pencil"></i> **How to avoid overfitting?**
 Since we implemented random forest algorithm, it has already used averaging to improve the predictive accuracy and controlled over-fitting.
 
-### **How to test the effectiveness of the model?**
-We would like to run test set on this model. We have trained the model with a precision of around 80% in the sample.
-
 ### **What remains to be done?**
 For further exploration, we would like to add more features to our input space. For example, we could use the home team and away team’s recent match record because the match record implies whether the team is in a good form recently. Another set of data we want to further investigate is each player’s lineup position and their individual ability values. For example, a player who is put at the forward position would better contribute the team if he has good shooting skill. By adding features that reflect the player’s contribution to the team at the specific position, we might be able to better estimate the outcome of matches. 
 
