@@ -1,14 +1,14 @@
 ﻿
 
-#**Soccer Match Outcome Prediction**
+**Soccer Match Outcome Prediction**
 
 
-####By Bingzhe Cheng, Zheng Feng, Weijia Mao
+#### By Bingzhe Cheng, Zheng Feng, Weijia Mao
 
 ----------
 
 
-####**Objective**
+#### **Objective**
 
 
 Our object is to predict the outcome of European soccer matches from 2008 to 2016 given the detailed match information which includes both teams’ player info, betting odds from different providers, etc. 
