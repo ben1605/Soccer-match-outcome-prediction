@@ -1,6 +1,6 @@
 ﻿
 
-**Soccer Match Outcome Prediction**
+# **Soccer Match Outcome Prediction**
 
 
 #### By Bingzhe Cheng, Zheng Feng, Weijia Mao
