@@ -68,7 +68,7 @@ To visualize the cutoff of the tree, we set max depth of the tree to be three in
 Another interesting point is that after comparing with the betting odds provided by ten different bookmakers, we found that our algorithm is actually better than theirs.
 
 ###  **How to avoid overfitting?**
-We added a column of ones to serve as the offset to avoid overfitting. On top of that, since we implemented random forest algorithm, it has already used averaging to improve the predictive accuracy and controlled over-fitting.
+First of all, we have 24 features but over 20,000 rows of data, so the overfitting is significantly avoided. On top of that, we used random forest whose bootstrap process can also avoid overfitting.
 
 ### **What remains to be done?**
 For further exploration, we would like to add more features to our input space. For example, we could use the home team and away team’s recent match record because the match record implies whether the team is in a good form recently. Another set of data we want to further investigate is each player’s lineup position and their individual ability values. For example, a player who is put at the forward position would better contribute the team if he has good shooting skill. By adding features that reflect the player’s contribution to the team at the specific position, we might be able to better estimate the outcome of matches. 
