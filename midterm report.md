@@ -29,9 +29,11 @@ http://sofifa.com/
 
 ### **Visualization**
 ![Overall Rating](https://lh3.googleusercontent.com/-V5pO6GcvtpA/WfO0gK4eUCI/AAAAAAAABcM/j4UDKngkqigohGNnc7YpJMuY8LtXNtTegCLcBGAs/s0/Overall_rating.png "Overall_rating")
+
 This graph shows the distribution of the overall ratings of every player.
 
 ![enter image description here](https://lh3.googleusercontent.com/-QrZFeOSsga8/WfO01o4ARCI/AAAAAAAABcU/1opEL5vlb0g2v0xVWZ_tdRUy2DvJal-JACLcBGAs/s0/match_outcome.png "match_outcome")
+
 This pie chart shows the distribution of the outcome of every soccer match.
 
 ### **Cleaning corrupted or missing data**
