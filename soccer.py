@@ -6,34 +6,34 @@ Created on Thu Oct 26 19:33:46 2017
 @author: WeijiaMao
 """
 
-#import pandas as pd
-#import numpy as np
-#match=pd.read_csv("Match.csv")
-#for i in range(1,12):  #clear match data
-#    match=match[np.invert(np.isnan(match['home_player_'+str(i)]))] 
-#    match=match[np.invert(np.isnan(match['away_player_'+str(i)]))]
-#match['result']=2
-#for i in range(len(match['result'])):   #add match result
-#    if(match.iloc[i,9]>match.iloc[i,10]):
-#        match.iloc[i,115]='win'
-#    elif(match.iloc[i,9]<match.iloc[i,10]):
-#        match.iloc[i,115]='lose'
-#    else:
-#        match.iloc[i,115]='draw'
-#
-#select_total=np.min(match.groupby(['result']).id.count())
-#match_test=pd.DataFrame()
-#match_train=pd.DataFrame()
-#for i,j in match.groupby(['result']):
-#    idx=np.random.randint(0,len(j),select_total)
-#    j=j.iloc[idx,:]
-#    idx_all=[k for k in range(len(j))]
-#    idx_test=np.random.randint(0,len(j),int(len(j)*0.2))
-#    j_test=j.iloc[idx_test,:]
-#    idx_train=list(set(idx_all)-set(idx_test))
-#    j_train=j.iloc[idx_train,:]
-#    match_train=match_train.append(j_train)
-#    match_test=match_test.append(j_test)
+import pandas as pd
+import numpy as np
+match=pd.read_csv("Match.csv")
+for i in range(1,12):  #clear match data
+    match=match[np.invert(np.isnan(match['home_player_'+str(i)]))] 
+    match=match[np.invert(np.isnan(match['away_player_'+str(i)]))]
+match['result']=2
+for i in range(len(match['result'])):   #add match result
+    if(match.iloc[i,9]>match.iloc[i,10]):
+        match.iloc[i,115]='win'
+    elif(match.iloc[i,9]<match.iloc[i,10]):
+        match.iloc[i,115]='lose'
+    else:
+        match.iloc[i,115]='draw'
+
+select_total=np.min(match.groupby(['result']).id.count())
+match_test=pd.DataFrame()
+match_train=pd.DataFrame()
+for i,j in match.groupby(['result']):
+    idx=np.random.randint(0,len(j),select_total)
+    j=j.iloc[idx,:]
+    idx_all=[k for k in range(len(j))]
+    idx_test=np.random.randint(0,len(j),int(len(j)*0.2))
+    j_test=j.iloc[idx_test,:]
+    idx_train=list(set(idx_all)-set(idx_test))
+    j_train=j.iloc[idx_train,:]
+    match_train=match_train.append(j_train)
+    match_test=match_test.append(j_test)
 
 match=match_train.append(match_test)
 
