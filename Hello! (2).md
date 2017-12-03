@@ -73,8 +73,11 @@ Bingzhe Cheng, bc638<br>
 	  
 </ol>
 
-<p align="center">
-  <img src=https://pa1.narvii.com/5740/adb11fd58f840ef5b650eead44c043fb5edb027a_hq.gif height="200" width="440">
+<p align="left">
+  <img src=https://pa1.narvii.com/5740/adb11fd58f840ef5b650eead44c043fb5edb027a_hq.gif height="300" width="440">
+</p>
+<p align="right">
+  <img src=https://pa1.narvii.com/5740/adb11fd58f840ef5b650eead44c043fb5edb027a_hq.gif height="300" width="440">
 </p>
 	
 **1. Project Introduction**
