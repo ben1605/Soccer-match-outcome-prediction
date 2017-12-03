@@ -9,15 +9,15 @@
 	</font>
 	</h1>
 </p>	
-<p align="center">
+<h2 align="center">
 	<font size="60" color="black">
 		<i> Final Project
 	</font>
-</p>	
-<p align="center">
+</h2>	
+<h3 align="center">
 	<font size="6" color="black">
     <b>Soccer Match Outcome Prediction
-</p>
+</h3>
 <p align="center">
   <img src="http://s.4cdn.org/image/title/105.gif">
 </p>
