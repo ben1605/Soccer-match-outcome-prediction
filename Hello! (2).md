@@ -57,7 +57,7 @@ Bingzhe Cheng, bc638<br>
 	</ul>	
     </ul>
   
-  <li>Models
+  <li><a href="#name_of_target3">Models</a>
 	  <ul>
 		3.1 Linear Regression<br>
 		3.2 Multiclass Classification (Binary Encoding)<br>
@@ -202,7 +202,7 @@ The output space is the result of the matches. It is defined as follows:
 
 ![enter image description here](https://lh3.googleusercontent.com/-1vUJdhP8OMA/WiRyYCKSfLI/AAAAAAAABhc/Xu2KdBHSyhAZPU4KlfEqWE41cpYuIL4YACLcBGAs/s300/Screen+Shot+2017-12-03+at+4.49.18+PM.png "Screen Shot 2017-12-03 at 4.49.18 PM.png")
 
-**3.  Models**
+**<a name="name_of_target3">3.  Models</a>**
 ---
 ### 3.1 Linear Regression
 Since our output space is {-1,0,1} and bigger number indicates that the home team does better, we were able to run a linear regression to test out the effect of each feature to the match result. After running linear regression, the coefficient vector is as follows:
