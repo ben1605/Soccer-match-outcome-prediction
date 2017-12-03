@@ -163,7 +163,7 @@ As we can see, there is a strong positive correlation between the ratings of two
 Again we can see that there are still strong correlations among these columns, so we decided to make all columns into two columns, one for home team and one for away team. We then calculated an overall score for each team base on the formula below:
 </p>
 
-![enter image description here](https://lh3.googleusercontent.com/-E957xRkpQsg/WiRyinxad2I/AAAAAAAABhk/s5e_MY7jQIE8RB4KTpFxN2_XknhZea83ACLcBGAs/s500/Screen+Shot+2017-12-03+at+4.49.29+PM.png "Screen Shot 2017-12-03 at 4.49.29 PM.png")
+![enter image description here](https://lh3.googleusercontent.com/-E957xRkpQsg/WiRyinxad2I/AAAAAAAABhk/s5e_MY7jQIE8RB4KTpFxN2_XknhZea83ACLcBGAs/s400/Screen+Shot+2017-12-03+at+4.49.29+PM.png "Screen Shot 2017-12-03 at 4.49.29 PM.png")
 
 
 The overall score is calculated by multiplying the ratings of all the players and take the kth root, where k is the number of players.
@@ -192,14 +192,14 @@ The betting odds reflect people’s anticipation of the result before a match ta
 
 #### 2.3.6. The output space
 The output space is the result of the matches. It is defined as follows:
-![enter image description here](https://lh3.googleusercontent.com/-1vUJdhP8OMA/WiRyYCKSfLI/AAAAAAAABhc/Xu2KdBHSyhAZPU4KlfEqWE41cpYuIL4YACLcBGAs/s500/Screen+Shot+2017-12-03+at+4.49.18+PM.png "Screen Shot 2017-12-03 at 4.49.18 PM.png")
+![enter image description here](https://lh3.googleusercontent.com/-1vUJdhP8OMA/WiRyYCKSfLI/AAAAAAAABhc/Xu2KdBHSyhAZPU4KlfEqWE41cpYuIL4YACLcBGAs/s300/Screen+Shot+2017-12-03+at+4.49.18+PM.png "Screen Shot 2017-12-03 at 4.49.18 PM.png")
 
 **3.  Models**
 ---
 ### 3.1 Linear Regression
 Since our output space is {-1,0,1} and bigger number indicates that the home team does better, we were able to run a linear regression to test out the effect of each feature to the match result. After running linear regression, the coefficient vector is as follows:
 
-![enter image description here](https://lh3.googleusercontent.com/-KzBrekgpQ1E/WiRli5jHRJI/AAAAAAAABhI/KVkPJtXa92I2dGAEeimmSPatoEMbPKuQgCLcBGAs/s800/Screen+Shot+2017-12-03+at+3.58.19+PM.png "Screen Shot 2017-12-03 at 3.58.19 PM.png")
+![enter image description here](https://lh3.googleusercontent.com/-KzBrekgpQ1E/WiRli5jHRJI/AAAAAAAABhI/KVkPJtXa92I2dGAEeimmSPatoEMbPKuQgCLcBGAs/s400/Screen+Shot+2017-12-03+at+3.58.19+PM.png "Screen Shot 2017-12-03 at 3.58.19 PM.png")
 
 where x1 is home team overall rating, x2 is away team overall rating, x3 is betting odds, x4 and x5 are home team’s number of defenders and forwards, x6 and x7 are away team’s number of defenders and forwards, x8 and x9 are home team and away team’s player rating variance, x10 and x11 are the winning rate and losing rate of the home team according to the historical head to head record. 
 
@@ -211,11 +211,11 @@ One thing to notice about linear regression is that although some of the feature
 ### 3.2 Multiclass Classification (Binary Encoding)
 In our problem, the outcome space has three classes, which are {1,-0,-1}. We decided to encode 1 as [1,-1], 0 as [-1,-1], and -1 as [-1,1]. Therefore, we transform our output space into the following:
 
-![enter image description here](https://lh3.googleusercontent.com/-FFdkr3DNnvI/WiR4dU6-XhI/AAAAAAAABiQ/UaO0IUoljB8sizEhTjriQ6Bf2V5uBreugCLcBGAs/s800/Screen+Shot+2017-12-03+at+5.19.10+PM.png "Screen Shot 2017-12-03 at 5.19.10 PM.png")
+![enter image description here](https://lh3.googleusercontent.com/-FFdkr3DNnvI/WiR4dU6-XhI/AAAAAAAABiQ/UaO0IUoljB8sizEhTjriQ6Bf2V5uBreugCLcBGAs/s300/Screen+Shot+2017-12-03+at+5.19.10+PM.png "Screen Shot 2017-12-03 at 5.19.10 PM.png")
 
 Essentially, we transform our multiclass classification problem into two binary classification problems. The first column of phi y can be interpreted as: 1 if home team wins, -1 if home team does not win. The second column of phi y can be interpreted as: 1 if home team loses, -1 if home team does not loses. This interpretation can be visualized as the following graph:
 
-![enter image description here](https://lh3.googleusercontent.com/-PYNTEALFDwg/WiR2hWI-NyI/AAAAAAAABh4/1VKRPNh44poH7xYNCKKzsUvEXZyhribKACLcBGAs/s800/scatter.png "scatter.png")
+![enter image description here](https://lh3.googleusercontent.com/-PYNTEALFDwg/WiR2hWI-NyI/AAAAAAAABh4/1VKRPNh44poH7xYNCKKzsUvEXZyhribKACLcBGAs/s300/scatter.png "scatter.png")
 
 
 In this graph, the x column represents the overall score of the home team and the y column represents the overall score of the away team. As we expected, the winning points are more towards the bottom right of the graph, the losing points are more towards the top left, and the drawing points are in the middle. The two lines represent the solutions to our problem. The bottom right line solves the first column of phi y and the top left line solves the second column of phi y. 
@@ -228,7 +228,7 @@ We applied the following 3 different algorithms to solve for the two straight li
 
 Because our data points are not linearly separable, we need to find other ways to solve linear classification problem. The idealist loss function for this problem is 0-1 miss-classification loss function but it is very hard to solve, so we use hinge loss to simulate 0-1 miss-classification loss function. For regularizer, we use shrinkage $||w||^2$. So our objective funtion is as:
 
-![enter image description here](https://lh3.googleusercontent.com/-XAFqzdL7IYU/WiR-wtpMhnI/AAAAAAAABio/spzguQcpyscqsgPR2-3FFfNKhzO06QZTwCLcBGAs/s800/Screen+Shot+2017-12-03+at+5.46.08+PM.png "Screen Shot 2017-12-03 at 5.46.08 PM.png")
+![enter image description here](https://lh3.googleusercontent.com/-XAFqzdL7IYU/WiR-wtpMhnI/AAAAAAAABio/spzguQcpyscqsgPR2-3FFfNKhzO06QZTwCLcBGAs/s300/Screen+Shot+2017-12-03+at+5.46.08+PM.png "Screen Shot 2017-12-03 at 5.46.08 PM.png")
 
 Then we use proximal subgradient descent to solve the problem. As a result, we were able to get a 63.19% accuracy for our prediction of the first column of psi y and 72.97% accuracy for our prediction of the second column. However when we combine the two column, the accuracy dropped down to 41.49%. 
 
