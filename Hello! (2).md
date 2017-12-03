@@ -8,7 +8,7 @@
 	</font>
 </p>	
 <p align="center">
-	<font size="6" color="black">
+	<font size="60" color="black">
 		<i> Final Project
 	</font>
 </p>	
