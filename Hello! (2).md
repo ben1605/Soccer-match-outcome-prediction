@@ -39,37 +39,35 @@ Bingzhe Cheng, bc638<br>
 	1.1 Introduction<br>
 	1.2 Objective   
     </ul> 
-  <li>Tea
+  <li>Data Processing and Visualization
     <ul>
-    2.1 Black tea<br>
-    2.2 Green tea
+    2.1 Data description<br>
+    2.2 Data Cleaning<br>
+    2.3 Data Processing
+	<ul>
+		2.3.1 Team Formation<br>
+		2.3.2. Player?s rating<br>
+		2.3.3. Variance of player?s rating<br>
+		2.3.4. Head to head record<br>
+		2.3.5. The betting odds<br>
+		2.3.6. The output space<br>
+	</ul>	
     </ul>
   </li>
-  <li>Milk</li>
+  <li>Models
+	  <ul>
+		3.1 Linear Regression<br>
+		3.2 Decision Tree (Random Forest)<br>
+		3.3 Multiclass Classification (Binary Encoding)<br>
+		  <ul>
+			3.3.1 Perceptron Algorithm<br>
+			3.3.2 Hinge Loss<br>
+		  </ul>
+	  </ul>	  
+  </li>
+  <li> Conclusion</li>
+	  
 </ol>
-1. Project Introduction
-	1.1 Introduction
-	1.2 Objective
-2. Data Processing and Visualization
-	2.1 Data description
-	2.2 Data Cleaning
-	2.3 Data Processing
-		2.3.1 Team Formation
-		2.3.2. Player?s rating
-		2.3.3. Variance of player?s rating
-		2.3.4. Head to head record
-		2.3.5. The betting odds
-		2.3.6. The output space
-3. Models
-	3.1 Linear Regression
-	3.2 Decision Tree (Random Forest)
-	3.3 Multiclass Classification (Binary Encoding)
-		3.3.1 Perceptron Algorithm
-		3.3.2 Hinge Loss
-4. Conclusion
-
-
-
 
 **1. Project Introduction**
 ---------------
