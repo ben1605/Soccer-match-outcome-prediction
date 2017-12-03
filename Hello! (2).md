@@ -201,6 +201,19 @@ According to the p value, the first 3 coefficients are statistically significant
 One thing to notice about linear regression is that although some of the features might seem to be insignificant, it does not mean that the features are useless. It might be because that the features and the matches results do not have a linear relationship. Later, we will apply a nonlinear model to see if we can make a better prediction.
 
 ### 3.2 Decision Tree (Random Forest)
+In our problem, the outcome space has three classes, which are {1,-0,-1}. We decided to encode 1 as [1,-1], 0 as [-1,-1], and -1 as [-1,1]. Therefore, we transform our output space into the following:
+
+![enter image description here](https://lh3.googleusercontent.com/-FFdkr3DNnvI/WiR4dU6-XhI/AAAAAAAABiQ/UaO0IUoljB8sizEhTjriQ6Bf2V5uBreugCLcBGAs/s800/Screen+Shot+2017-12-03+at+5.19.10+PM.png "Screen Shot 2017-12-03 at 5.19.10 PM.png")
+
+Essentially, we transform our multiclass classification problem into two binary classification problems. The first column of phi y can be interpreted as: 1 if home team wins, -1 if home team does not win. The second column of phi y can be interpreted as: 1 if home team loses, -1 if home team does not loses. This interpretation can be visualized as the following graph:
+
+![enter image description here](https://lh3.googleusercontent.com/-PYNTEALFDwg/WiR2hWI-NyI/AAAAAAAABh4/1VKRPNh44poH7xYNCKKzsUvEXZyhribKACLcBGAs/s800/scatter.png "scatter.png")
+
+
+In this graph, the x column represents the overall score of the home team and the y column represents the overall score of the away team. As we expected, the winning points are more towards the bottom right of the graph, the losing points are more towards the top left, and the drawing points are in the middle. The two lines represent the solutions to our problem. The bottom right line solves the first column of phi y and the top left line solves the second column of phi y. 
+
+
+We applied the following 3 different algorithms to solve for the two straight lines.(On a higher dimension with all other features involve) Since our data is sorted by date, we make the first 80% data our training set and the last 20% our prediction set. 
 
 ### 3.3 Multiclass Classification (Binary Encoding)
 #### 3.3.1 Perceptron Algorithm
