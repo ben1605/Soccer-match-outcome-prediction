@@ -4,7 +4,7 @@
 </p>	
 <p align="center">
 	<font size="7" color="FF3300">
-		<b>ORIE 4741
+		<b> ORIE 4741
 	</font>
 </p>	
 <p align="center">
@@ -29,9 +29,8 @@ Bingzhe Cheng, bc638<br>
 
 
 ----------
-<p align="left" color=FFEE33>
-		<b>Contents
-</p>
+## Contents
+
 <ol>
   <li>Project Introduction</li>
     <ul>
