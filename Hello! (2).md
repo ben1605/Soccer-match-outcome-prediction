@@ -9,7 +9,7 @@
 </p>	
 <p align="center">
 	<font size="60" color="black">
-		<i> ## Final Project
+		<i> Final Project
 	</font>
 </p>	
 <p align="center">
@@ -32,6 +32,21 @@ Bingzhe Cheng, bc638<br>
 <font size="6" color="black">
 <b>Contents
 </font>
+
+<ol>
+  <li>Project Introduction</li>
+    <ul>
+	1.1 Introduction<br>
+	1.2 Objective   
+    </ul> 
+  <li>Tea
+    <ul>
+    2.1 Black tea<br>
+    2.2 Green tea
+    </ul>
+  </li>
+  <li>Milk</li>
+</ol>
 1. Project Introduction
 	1.1 Introduction
 	1.2 Objective
