@@ -29,7 +29,7 @@ Bingzhe Cheng, bc638<br>
 
 
 ----------
-<font size="6" color="black">
+<font size="7" color="black">
 <b>Contents
 </font>
 
@@ -131,11 +131,13 @@ In our dataset, we found that there are 44 columns which indicate the position o
  <p >   <b>   &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4-3-3 &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3-4-3
 </p>
 	
-<p>
+
 These graphs are some examples of commonly used formations. As shown in these graphs, there are generally four levels of players in each team, where the orange points represent forwards, red points represent midfields, blue points represent defenders, and green points represent goalkeepers. A formation of a team is determined by the number of forwards, midfielders, and defenders, and our goal is to transform the formation information into features for our project. Another thing needs to mention was that forwards and defenders are always in the same line (Y-coordinate), which made it more convenient to count their numbers, and by subtracting their sum from ten, we got the number of midfielders in each match. This is how we obtain the formation information from players’ position. 
-<br>
+	
+	
 We then added four columns of features to our data, they are: the number of forwards in the home team and away team, the number of defenders in the home team and away team. We left out the number of goalkeepers because it is always one. We left out the number of mid-fields to avoid collinearity.  
-</p>
+
+
 
 #### 2.3.2. Player’s rating
 In our midterm report, our input space contains 22 columns of data representing the overall rating of each startup player in home team and away team. The correlation matrix is as follows: 
@@ -156,24 +158,31 @@ Again we can see that there are still strong correlations among these columns, s
 
 ![enter image description here](https://lh3.googleusercontent.com/-E957xRkpQsg/WiRyinxad2I/AAAAAAAABhk/s5e_MY7jQIE8RB4KTpFxN2_XknhZea83ACLcBGAs/s800/Screen+Shot+2017-12-03+at+4.49.29+PM.png "Screen Shot 2017-12-03 at 4.49.29 PM.png")
 
-<p>
+
 The overall score is calculated by multiplying the ratings of all the players and take the kth root, where k is the number of players.
-<br>
+
+
 By this method, we get two features. They are home team and away team’s overall score. 
-</p>
+
 #### 2.3.3. Variance of player’s rating
 Since soccer is a team sport, it is important that players on the same team should be at the same level to ensure good corporation. Therefore, we decided to calculate the variance of the home players’ ratings and away players’ ratings. We hypothesised that higher variance of the home team is negatively correlated with home team’s match result, while the higher variance of the away team is positively correlated with away team’s match result.
 
+
 #### 2.3.4. Head to head record
-<p>
+
+
 In soccer, we often heard people saying that one team is particularly good or bad playing against another team. For example, The Chinese national soccer team is infamous for its bad record playing against the North Korea. In this case, the head to head record could capture this pattern that could not be captured by players’ individual ratings. 
-<br>
+
+
 Therefore, for each match, we look at all the matches played between the two teams before and calculate the home team’s winning rate, drawing rate, and losing rate. If there is no previous head to head record, we assign them to be ⅓ each.
-<br>
+
+
 We were able to get two new features. They are: home team’s winning rate and home team’s losing rate. We left out the home team’s drawing rate to avoid colinearity. 
-</p>
+
+
 #### 2.3.5. The betting odds
 The betting odds reflect people’s anticipation of the result before a match takes place. We believe that it is a very useful feature because people who place their bets are usually the ones that do more research on the soccer teams and thus might have more insight knowledge about both team.
+
 #### 2.3.6. The output space
 The output space is the result of the matches. It is defined as follows:
 ![enter image description here](https://lh3.googleusercontent.com/-1vUJdhP8OMA/WiRyYCKSfLI/AAAAAAAABhc/Xu2KdBHSyhAZPU4KlfEqWE41cpYuIL4YACLcBGAs/s800/Screen+Shot+2017-12-03+at+4.49.18+PM.png "Screen Shot 2017-12-03 at 4.49.18 PM.png")
