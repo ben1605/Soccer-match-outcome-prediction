@@ -20,6 +20,9 @@
   <img src="http://s.4cdn.org/image/title/105.gif">
 </p>
 <p align="center">
+  <img src="https://media.giphy.com/media/ohT97gdpR40vK/giphy.gif">
+</p>
+<p align="center">
 	<font size="5" color="black">
 Zheng Feng, zf72<br>                                     
 Bingzhe Cheng, bc638<br>
