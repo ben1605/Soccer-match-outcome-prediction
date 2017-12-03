@@ -34,7 +34,7 @@ Bingzhe Cheng, bc638<br>
 
 
 ----------
-## <span style="color:red">Contents</span>
+## Contents
 
 <ol>
   <li><a href="#name_of_target">Project Introduction</a></li>
@@ -83,7 +83,8 @@ Bingzhe Cheng, bc638<br>
 **<a name="name_of_target">1. Project Introduction</a>**
 ---------------
 
-<a name="1.1Intro"><font size="7">1.1 Introduction</font></a>
+### <a name="1.1Intro">1.1 Introduction</a>
+
 Soccer is the most popular sport in the world. Every year thousands of professional soccer matches were played among the best soccer players in the world. We were often given the impression that soccer matches, unlike other sports, are hard to predict. It is not uncommon that an underdog team upsets a team with many superstars.
 
 We are all fanatic soccer fans, and are interested in finding ways to predict the outcomes of matches more precisely. We found datasets from the internet that contain detailed information about different teams and players and matches they played. We decided that with the help of big data, we can make more precise predictions on soccer match outcomes. 
