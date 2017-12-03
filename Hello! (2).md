@@ -226,12 +226,19 @@ Essentially, we transform our multiclass classification problem into two binary 
 ![enter image description here](https://lh3.googleusercontent.com/-PYNTEALFDwg/WiR2hWI-NyI/AAAAAAAABh4/1VKRPNh44poH7xYNCKKzsUvEXZyhribKACLcBGAs/s800/scatter.png "scatter.png")
 
 
-In this graph, the x column represents the overall score of the home team and the y column represents the overall score of the away team. As we expected, the winning points are more towards the bottom right of the graph, the losing points are more towards the top left, and the drawing points are in the middle. The two lines represent the solutions to our problem. The bottom right line solves the first column of phi y and the top left line solves the second column of phi y. 
+In this graph, the x column represents the overall score of the home team and the y column represents the overall score of the away team. As we expected, the winning points are more towards the bottom right of the graph, the losing points are more towards the top left, and the drawing points are in the middle. The two lines represent the solutions to our problem. The bottom right line solves the first column of psi y and the top left line solves the second column of psi y. 
 
 
 We applied the following 3 different algorithms to solve for the two straight lines.(On a higher dimension with all other features involve) Since our data is sorted by date, we make the first 80% data our training set and the last 20% our prediction set. 
 
+
+One problem with encoding is that if our final prediction turn out to be [1,1], it does not have a meaningful representation. We decided to assign them to draw because those nonsense region is still in the middle of the graph.
+
+
 #### 3.2.1 Perceptron Algorithm
+
+Since the problems are clearly not linear separable and there are so many outliers in out data. Perceptron Algorithm turned out not to be a good approach. We were only able to get a 47.41% accuracy for our prediction of the first column of psi y and 63.30% accuracy for our prediction of the second column. When we combine the two column,the accuracy dropped down to 38.40%. It is still better than 33.3%, which is the probability if we guess randomly, but not by a lot. 
+
 #### 3.2.2 Hinge Loss
 
 Because our data points are not linearly separable, we need to find other ways to solve linear classification problem. The idealist loss function for this problem is 0-1 miss-classification loss function but it is very hard to solve, so we use hinge loss to simulate 0-1 miss-classification loss function. For regularizer, we use shrinkage $||w||^2$. So our objective funtion is as:
@@ -240,19 +247,28 @@ Because our data points are not linearly separable, we need to find other ways t
 
 Then we use proximal subgradient descent to solve the problem. As a result, we were able to get a 62.67% accuracy for our prediction of the first column of psi y and 70.47% accuracy for our prediction of the second column. When we combine the two columns, the accuracy dropped down to 41.40%. 
 
-### 3.3 Decision Tree (Random Forest)
+#### 3.2.3 Decision Tree (Random Forest)
 Finally, we decided to give random forest a try. Our prediction, in this case, is not separated by 2 lines. We wish that we can use decision tree to capture the nonlinearity of the data. 
 
 
 Unfortunately, the result is almost the same as the hinge loss. Our prediction of the first column has a 63.19% accuracy, our prediction of the second column has a 73.06% accuracy, and our prediction of the final result has a 43.15% accuracy.
 It turned out that encoding is also not an efficient way of solving the problem. From the above graph, we can see that a lot of the winning, drawing, and losing dots are mixed together. It is almost impossible to separate those points with only 2 straight lines. 
 
-
+### 3.3 Decision Tree (Random Forest)
 Another problem of encoding is that, although some of the models predicted the two columns of psi y pretty well, when combine those two predictions together, the correct points of the two predictions does not completely overlap with each other. Causing the final prediction to be poor. 
 
+We then decided to apply random forest directly to our problem without encoding. This turned out to be a better approach. 
+In Decision Tree Method, each data point has 12 features. Therefore in each depth of tree, the algorithm will make a binary split of all data points according to one feature. At the bottom of the tree, the data points will be splitted into 2^n boxes. We define the value of each box to be the mode of the data points in the box. Then we use this tree to predict our test data points. If one data point is in a box, then we predict this data point to be the value of this box. 
+
+
+To decrease the variance of estimates, we use a random forest rather than a single decision tree. For example, if we have M data points and N features, we randomly choose 2/3M data points with replacement for B times to form B bags. Then for each bag, we choose P out of M features to form a decision tree. Thus we will have B decision trees. To predict a data point, we calculate the average predictions across B decision tress.
+
+
+For our problem, we set the minimum number of data points in each box to be 15, the maximal depth of each tree to be 10 and we use Gini to be the criterion. Solved by random forest, the final result has a 56.41% accuracy. 
 
 **<a name="name_of_target4">4. Conclusion</a>**
--
+----
+Among all the models we tried, Random Forest is the best model with a 56% accuracy. It may seem to be not very high, but given the complex nature of the problem, and the fact that it is a multiclass classification problem instead of a binary classification problem, 56% is a fairly high value. In our opinion, in order to make a better prediction, we need to find more useful features. For example, the head coaches’ information and the sport news that is related to predicting the match result. This would require application of NLP and further study of data gathering techniques. 
 
 
 
