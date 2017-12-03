@@ -60,12 +60,14 @@ Bingzhe Cheng, bc638<br>
   <li>Models
 	  <ul>
 		3.1 Linear Regression<br>
-		3.2 Decision Tree (Random Forest)<br>
-		3.3 Multiclass Classification (Binary Encoding)<br>
+		3.2 Multiclass Classification (Binary Encoding)<br>
 		  <ul>
-			3.3.1 Perceptron Algorithm<br>
-			3.3.2 Hinge Loss<br>
+			3.2.1 Perceptron Algorithm<br>
+			3.2.2 Hinge Loss<br>
+			3.2.3 Decision Tree (Random Forest)<br>
 		  </ul>
+		3.3 Decision Tree (Random Forest)<br>
+		
 	  </ul>	  
   </li>
   <li> Conclusion</li>
