@@ -108,7 +108,7 @@ http://sofifa.com/
 
 <p align="center">
 	<img style="float:center;" src="https://lh3.googleusercontent.com/SGgqwBfw-3K6hWEyJn050NEi2TR1-U5vTse17EYcxUV6kNp1_fro9SsVKzODv_V84hgDl3tXpEiS=s1000")
-
+</p>
 <p>
 	This pie chart shows the distribution of the outcome of every soccer match.
 </p>
