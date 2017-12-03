@@ -73,8 +73,9 @@ Bingzhe Cheng, bc638<br>
 </ol>
 
 <p align="center">
-  <img src="https://media.giphy.com/media/qxYkv4GuyYbbG/giphy.gif"
+  <img src="https://media.giphy.com/media/qxYkv4GuyYbbG/giphy.gif" height="42" width="420">
 </p>
+	
 **1. Project Introduction**
 ---------------
 
