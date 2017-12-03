@@ -66,8 +66,7 @@ Bingzhe Cheng, bc638<br>
 			3.2.2 Hinge Loss<br>
 			3.2.3 Decision Tree (Random Forest)<br>
 		  </ul>
-		3.3 Decision Tree (Random Forest)<br>
-		
+		3.3 Decision Tree (Random Forest)<br>	
 	  </ul>	  
   </li>
   <li> Conclusion</li>
