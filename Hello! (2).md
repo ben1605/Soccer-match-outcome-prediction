@@ -140,13 +140,14 @@ In our midterm report, our input space contains 22 columns of data representing 
 <p align="center">
 	<img style="float:center;" src="https://lh3.googleusercontent.com/-I6DAFQvpYMk/WiRcxZXg5NI/AAAAAAAABgQ/Lvi9EZrfbn4CeudS4A3shR49Q_huutZbgCLcBGAs/s600/correlation+matrix.png")
 
-//
+</p><p>
 As we can see, there is a strong positive correlation between the ratings of two players from the same team. This means that we can combine some of the players’ rating to reduce the total number of features. We grouped the players into four categories: goalkeeper, defender, midfielder and forward, and their correlation matrix is as follows: 
+	</p>
 <p align="center">
 	<img style="float:center;" src="https://lh3.googleusercontent.com/-oRkJW6sg8Uo/WiRdU1IwAzI/AAAAAAAABgc/yRhGo2QjWKQb_oitetfo7-gvFgHPtSrBwCLcBGAs/s600/formation+matrix.png")
-
+</p><p>
 Again we can see that there are still strong correlations among these columns, so we decided to make all columns into two columns, one for home team and one for away team. We then calculated an overall score for each team base on the formula below:
-
+</p>
 Overall score = ($\Pi \ Player \ i's \ rating)^{1/k}$
 
 The overall score is calculated by multiplying the ratings of all the players and take the kth root, where k is the number of players.
