@@ -29,7 +29,7 @@ Bingzhe Cheng, bc638<br>
 
 
 ----------
-<font size="7" color="black">
+<font size="7" color="green">
 <b>Contents
 </font>
 
@@ -156,7 +156,7 @@ As we can see, there is a strong positive correlation between the ratings of two
 Again we can see that there are still strong correlations among these columns, so we decided to make all columns into two columns, one for home team and one for away team. We then calculated an overall score for each team base on the formula below:
 </p>
 
-![enter image description here](https://lh3.googleusercontent.com/-E957xRkpQsg/WiRyinxad2I/AAAAAAAABhk/s5e_MY7jQIE8RB4KTpFxN2_XknhZea83ACLcBGAs/s800/Screen+Shot+2017-12-03+at+4.49.29+PM.png "Screen Shot 2017-12-03 at 4.49.29 PM.png")
+![enter image description here](https://lh3.googleusercontent.com/-E957xRkpQsg/WiRyinxad2I/AAAAAAAABhk/s5e_MY7jQIE8RB4KTpFxN2_XknhZea83ACLcBGAs/s500/Screen+Shot+2017-12-03+at+4.49.29+PM.png "Screen Shot 2017-12-03 at 4.49.29 PM.png")
 
 
 The overall score is calculated by multiplying the ratings of all the players and take the kth root, where k is the number of players.
@@ -185,7 +185,7 @@ The betting odds reflect people’s anticipation of the result before a match ta
 
 #### 2.3.6. The output space
 The output space is the result of the matches. It is defined as follows:
-![enter image description here](https://lh3.googleusercontent.com/-1vUJdhP8OMA/WiRyYCKSfLI/AAAAAAAABhc/Xu2KdBHSyhAZPU4KlfEqWE41cpYuIL4YACLcBGAs/s800/Screen+Shot+2017-12-03+at+4.49.18+PM.png "Screen Shot 2017-12-03 at 4.49.18 PM.png")
+![enter image description here](https://lh3.googleusercontent.com/-1vUJdhP8OMA/WiRyYCKSfLI/AAAAAAAABhc/Xu2KdBHSyhAZPU4KlfEqWE41cpYuIL4YACLcBGAs/s500/Screen+Shot+2017-12-03+at+4.49.18+PM.png "Screen Shot 2017-12-03 at 4.49.18 PM.png")
 
 **3.  Models**
 ---
