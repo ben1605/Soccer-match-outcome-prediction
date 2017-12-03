@@ -216,7 +216,7 @@ One thing to notice about linear regression is that although some of the feature
 ### 3.2 Multiclass Classification (Binary Encoding)
 In our problem, the outcome space has three classes, which are {1,-0,-1}. We decided to encode 1 as [1,-1], 0 as [-1,-1], and -1 as [-1,1]. Therefore, we transform our output space into the following:
 
-![enter image description here](https://lh3.googleusercontent.com/-FFdkr3DNnvI/WiR4dU6-XhI/AAAAAAAABiQ/UaO0IUoljB8sizEhTjriQ6Bf2V5uBreugCLcBGAs/s200/Screen+Shot+2017-12-03+at+5.19.10+PM.png "Screen Shot 2017-12-03 at 5.19.10 PM.png")
+![enter image description here](https://lh3.googleusercontent.com/-gIcCQu3nQUA/WiSFIGO2WpI/AAAAAAAABjA/BxGfkjPW5ywQSYqjxC45ZDIqAv-HtY4bgCLcBGAs/s200/Picture2.png "Picture2.png")
 
 Essentially, we transform our multiclass classification problem into two binary classification problems. The first column of phi y can be interpreted as: 1 if home team wins, -1 if home team does not win. The second column of phi y can be interpreted as: 1 if home team loses, -1 if home team does not loses. This interpretation can be visualized as the following graph:
 
@@ -233,7 +233,7 @@ We applied the following 3 different algorithms to solve for the two straight li
 
 Because our data points are not linearly separable, we need to find other ways to solve linear classification problem. The idealist loss function for this problem is 0-1 miss-classification loss function but it is very hard to solve, so we use hinge loss to simulate 0-1 miss-classification loss function. For regularizer, we use shrinkage $||w||^2$. So our objective funtion is as:
 
-![enter image description here](https://lh3.googleusercontent.com/-XAFqzdL7IYU/WiR-wtpMhnI/AAAAAAAABio/spzguQcpyscqsgPR2-3FFfNKhzO06QZTwCLcBGAs/s500/Screen+Shot+2017-12-03+at+5.46.08+PM.png "Screen Shot 2017-12-03 at 5.46.08 PM.png")
+![enter image description here](https://lh3.googleusercontent.com/-4pmAdFztObI/WiSFWz7ySLI/AAAAAAAABjI/c1WY6ybzGwcBOmmG1cUOuhNki0iw5bDqgCLcBGAs/s500/Picture3.png "Picture3.png")
 
 Then we use proximal subgradient descent to solve the problem. As a result, we were able to get a 62.67% accuracy for our prediction of the first column of psi y and 70.47% accuracy for our prediction of the second column. When we combine the two columns, the accuracy dropped down to 41.40%. 
 
