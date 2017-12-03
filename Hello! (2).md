@@ -228,7 +228,7 @@ We applied the following 3 different algorithms to solve for the two straight li
 
 Because our data points are not linearly separable, we need to find other ways to solve linear classification problem. The idealist loss function for this problem is 0-1 miss-classification loss function but it is very hard to solve, so we use hinge loss to simulate 0-1 miss-classification loss function. For regularizer, we use shrinkage $||w||^2$. So our objective funtion is as:
 
-
+![enter image description here](https://lh3.googleusercontent.com/-XAFqzdL7IYU/WiR-wtpMhnI/AAAAAAAABio/spzguQcpyscqsgPR2-3FFfNKhzO06QZTwCLcBGAs/s800/Screen+Shot+2017-12-03+at+5.46.08+PM.png "Screen Shot 2017-12-03 at 5.46.08 PM.png")
 
 Then we use proximal subgradient descent to solve the problem. As a result, we were able to get a 63.19% accuracy for our prediction of the first column of psi y and 72.97% accuracy for our prediction of the second column. However when we combine the two column, the accuracy dropped down to 41.49%. 
 
