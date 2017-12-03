@@ -42,7 +42,7 @@ Bingzhe Cheng, bc638<br>
 	1.1 Introduction<br>
 	1.2 Objective   
     </ul> 
-  <li><a href="2">Data Processing and Visualization</a></li>
+  <li><a href="#2">Data Processing and Visualization</a></li>
     <ul>
     2.1 Data Description<br>
     2.2 Data Cleaning<br>
@@ -93,8 +93,10 @@ We are all fanatic soccer fans, and are interested in finding ways to predict th
 Our objective is to develop models base on the data we have to predict soccer match outcomes.
 
 -------------------
-**<a name="2">2. Data Processing and Visualization</a>**
--
+
+**<a name="#2">2. Data Processing and Visualization</a>**
+-----------
+
 ### 2.1 Data description
 We used three data sets. The first one contains more than 25,000 European soccer matches and their information from 2008 to 2016, such as scores, lineup players’ id, team formation and events. The second file consists of the betting odds for each match. The last one has all players and teams attributes from EA Sports FIFA games. We believe that FIFA gives relatively accurate ratings for players since it puts a lot of efforts into estimating players’ abilities. It uses a network of over 9,000 members to do a throughout review on each player. 
 
@@ -239,6 +241,14 @@ Because our data points are not linearly separable, we need to find other ways t
 Then we use proximal subgradient descent to solve the problem. As a result, we were able to get a 62.67% accuracy for our prediction of the first column of psi y and 70.47% accuracy for our prediction of the second column. When we combine the two columns, the accuracy dropped down to 41.40%. 
 
 ### 3.3 Decision Tree (Random Forest)
+Finally, we decided to give random forest a try. Our prediction, in this case, is not separated by 2 lines. We wish that we can use decision tree to capture the nonlinearity of the data. 
+
+
+Unfortunately, the result is almost the same as the hinge loss. Our prediction of the first column has a 63.19% accuracy, our prediction of the second column has a 73.06% accuracy, and our prediction of the final result has a 43.15% accuracy.
+It turned out that encoding is also not an efficient way of solving the problem. From the above graph, we can see that a lot of the winning, drawing, and losing dots are mixed together. It is almost impossible to separate those points with only 2 straight lines. 
+
+
+Another problem of encoding is that, although some of the models predicted the two columns of psi y pretty well, when combine those two predictions together, the correct points of the two predictions does not completely overlap with each other. Causing the final prediction to be poor. 
 
 
 **4. Conclusion**
