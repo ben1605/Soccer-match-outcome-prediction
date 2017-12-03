@@ -12,9 +12,9 @@
 <h2 align="center" color=""FF3300>
 	<font size="60" color="black">
 		<i> Final Project<br>
-	</font>
+	</font><br>
 	<font size="6" color="black">
-    <b>Soccer Match Outcome Prediction
+    <b><br>Soccer Match Outcome Prediction
 </h2>
 <!---
 <p align="center">
