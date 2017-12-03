@@ -89,9 +89,11 @@ We used three data sets. The first one contains more than 25,000 European soccer
 1. Scores, lineup, team formation and events
 
 http://football-data.mx-api.enetscores.com/ 
+
 2. Betting odds
 
 http://www.football-data.co.uk/ 
+
 3. Players and teams attributes from EA Sports FIFA games
 
 http://sofifa.com/ 
@@ -99,7 +101,7 @@ http://sofifa.com/
 <p align="center">
 	<img style="float:center;" src="https://lh3.googleusercontent.com/CdoxumWjuI4A_Yz8iFcBuFJWnmwHdw0eMa6dPSG1xOS9mXenXA6wUD-Ezl5axNoDkXzO62dWionH=s800")
 
-
+<br>
 This graph shows the distribution of the overall ratings of every player.
 
 <p align="center">
