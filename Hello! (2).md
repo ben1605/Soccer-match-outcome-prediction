@@ -29,10 +29,11 @@ Bingzhe Cheng, bc638<br>
 
 
 ----------
+<p align="center">
 <font size="7" color="green">
 <b>Contents
 </font>
-
+</p>
 <ol>
   <li>Project Introduction</li>
     <ul>
