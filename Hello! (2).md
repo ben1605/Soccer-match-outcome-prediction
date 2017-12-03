@@ -211,7 +211,9 @@ One thing to notice about linear regression is that although some of the feature
 ### 3.2 Multiclass Classification (Binary Encoding)
 In our problem, the outcome space has three classes, which are {1,-0,-1}. We decided to encode 1 as [1,-1], 0 as [-1,-1], and -1 as [-1,1]. Therefore, we transform our output space into the following:
 
+
 ![enter image description here](https://lh3.googleusercontent.com/-FFdkr3DNnvI/WiR4dU6-XhI/AAAAAAAABiQ/UaO0IUoljB8sizEhTjriQ6Bf2V5uBreugCLcBGAs/s200/Screen+Shot+2017-12-03+at+5.19.10+PM.png "Screen Shot 2017-12-03 at 5.19.10 PM.png")
+
 
 Essentially, we transform our multiclass classification problem into two binary classification problems. The first column of phi y can be interpreted as: 1 if home team wins, -1 if home team does not win. The second column of phi y can be interpreted as: 1 if home team loses, -1 if home team does not loses. This interpretation can be visualized as the following graph:
 
