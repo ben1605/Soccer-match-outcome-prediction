@@ -9,7 +9,7 @@
 </p>	
 <p align="center">
 	<font size="60" color="black">
-		<i> Final Project
+		<i> ## Final Project
 	</font>
 </p>	
 <p align="center">
