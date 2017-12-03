@@ -41,16 +41,16 @@ Bingzhe Cheng, bc638<br>
     </ul> 
   <li>Data Processing and Visualization
     <ul>
-    2.1 Data description<br>
+    2.1 Data Description<br>
     2.2 Data Cleaning<br>
     2.3 Data Processing
 	<ul>
 		2.3.1 Team Formation<br>
-		2.3.2. Player?s rating<br>
-		2.3.3. Variance of player?s rating<br>
-		2.3.4. Head to head record<br>
-		2.3.5. The betting odds<br>
-		2.3.6. The output space<br>
+		2.3.2. Player's Rating<br>
+		2.3.3. Variance of Player's Rating<br>
+		2.3.4. Head to Head record<br>
+		2.3.5. The Betting Odds<br>
+		2.3.6. The Output Space<br>
 	</ul>	
     </ul>
   </li>
@@ -102,7 +102,9 @@ http://sofifa.com/
 	<img style="float:center;" src="https://lh3.googleusercontent.com/CdoxumWjuI4A_Yz8iFcBuFJWnmwHdw0eMa6dPSG1xOS9mXenXA6wUD-Ezl5axNoDkXzO62dWionH=s800")
 
 <br>
-This graph shows the distribution of the overall ratings of every player.
+<p>
+	This graph shows the distribution of the overall ratings of every player.
+</p>
 
 <p align="center">
 	<img style="float:center;" src="https://lh3.googleusercontent.com/SGgqwBfw-3K6hWEyJn050NEi2TR1-U5vTse17EYcxUV6kNp1_fro9SsVKzODv_V84hgDl3tXpEiS=s1000")
