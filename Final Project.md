@@ -78,7 +78,7 @@ Bingzhe Cheng, bc638<br>
 **<a name="name_of_target">1. Project Introduction</a>**
 ---------------
 
-### 1.1 Introduction
+### **1.1 Introduction**
 
 Soccer is the most popular sport in the world. Every year thousands of professional soccer matches were played among the best soccer players in the world. We were often given the impression that soccer matches, unlike other sports, are hard to predict. It is not uncommon that an underdog team upsets a team with many superstars.
 
