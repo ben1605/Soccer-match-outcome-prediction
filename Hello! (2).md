@@ -16,9 +16,11 @@
 	<font size="6" color="black">
     <b>Soccer Match Outcome Prediction
 </h2>
+<!---
 <p align="center">
   <img src="http://s.4cdn.org/image/title/105.gif">
 </p>
+-->
 <p align="center">
   <img src="https://media.giphy.com/media/ohT97gdpR40vK/giphy.gif">
 </p>
