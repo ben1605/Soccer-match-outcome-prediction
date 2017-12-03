@@ -103,15 +103,15 @@ http://sofifa.com/
 
 <br>
 <p>
-	This graph shows the distribution of the overall ratings of every player.
+	<i>This graph shows the distribution of the overall ratings of every player.
 </p>
 
 <p align="center">
 	<img style="float:center;" src="https://lh3.googleusercontent.com/SGgqwBfw-3K6hWEyJn050NEi2TR1-U5vTse17EYcxUV6kNp1_fro9SsVKzODv_V84hgDl3tXpEiS=s1000")
 
-
-This pie chart shows the distribution of the outcome of every soccer match.
-
+<p>
+	This pie chart shows the distribution of the outcome of every soccer match.
+</p>
 
 ### 2.2 Data Cleaning
 We deleted the matches that miss one or more players’ id info. There are 4,605 of them out of 25,979. 
