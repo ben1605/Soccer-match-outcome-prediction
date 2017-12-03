@@ -39,10 +39,10 @@ Bingzhe Cheng, bc638<br>
 <ol>
   <li><a href="#name_of_target">Project Introduction</a></li>
     <ul>
-	<a href="1.1Intro">1.1 Introduction</a><br>
+	1.1 Introduction<br>
 	1.2 Objective   
     </ul> 
-  <li>Data Processing and Visualization
+  <li><a href="2">Data Processing and Visualization</a></li>
     <ul>
     2.1 Data Description<br>
     2.2 Data Cleaning<br>
@@ -56,7 +56,7 @@ Bingzhe Cheng, bc638<br>
 		2.3.6. The Output Space<br>
 	</ul>	
     </ul>
-  </li>
+  
   <li>Models
 	  <ul>
 		3.1 Linear Regression<br>
@@ -83,7 +83,7 @@ Bingzhe Cheng, bc638<br>
 **<a name="name_of_target">1. Project Introduction</a>**
 ---------------
 
-### <a name="1.1Intro">1.1 Introduction</a>
+### 1.1 Introduction
 
 Soccer is the most popular sport in the world. Every year thousands of professional soccer matches were played among the best soccer players in the world. We were often given the impression that soccer matches, unlike other sports, are hard to predict. It is not uncommon that an underdog team upsets a team with many superstars.
 
@@ -93,7 +93,7 @@ We are all fanatic soccer fans, and are interested in finding ways to predict th
 Our objective is to develop models base on the data we have to predict soccer match outcomes.
 
 -------------------
-**2. Data Processing and Visualization**
+**<a name="name_of_target">2. Data Processing and Visualization</a>**
 -
 ### 2.1 Data description
 We used three data sets. The first one contains more than 25,000 European soccer matches and their information from 2008 to 2016, such as scores, lineup players’ id, team formation and events. The second file consists of the betting odds for each match. The last one has all players and teams attributes from EA Sports FIFA games. We believe that FIFA gives relatively accurate ratings for players since it puts a lot of efforts into estimating players’ abilities. It uses a network of over 9,000 members to do a throughout review on each player. 
