@@ -34,7 +34,7 @@ Bingzhe Cheng, bc638<br>
 
 
 ----------
-## Contents
+## <span style="color:red">Contents</span>
 
 <ol>
   <li>Project Introduction</li>
@@ -205,7 +205,6 @@ where x1 is home team overall rating, x2 is away team overall rating, x3 is bett
 
 According to the p value, the first 3 coefficients are statistically significant. This is as expected. Besides home team’s number of defenders, the team’s formation does not seem to be very important. for the player’s rating variance x8 and x9, it is surprising that a higher variance actually contributes to the team’s match performance, it is opposite to what we hypothesized. It is also surprising that the historical head to head record is insignificant. One possible cause might be that the available data is not big enough for our regression to be meaningful.
 
-#########test result####################
 
 One thing to notice about linear regression is that although some of the features might seem to be insignificant, it does not mean that the features are useless. It might be because that the features and the matches results do not have a linear relationship. Later, we will apply a nonlinear model to see if we can make a better prediction.
 
@@ -223,6 +222,7 @@ In this graph, the x column represents the overall score of the home team and th
 
 
 We applied the following 3 different algorithms to solve for the two straight lines.(On a higher dimension with all other features involve) Since our data is sorted by date, we make the first 80% data our training set and the last 20% our prediction set. 
+
 #### 3.2.1 Perceptron Algorithm
 #### 3.2.2 Hinge Loss
 
