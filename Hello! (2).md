@@ -232,7 +232,7 @@ Because our data points are not linearly separable, we need to find other ways t
 
 ![enter image description here](https://lh3.googleusercontent.com/-XAFqzdL7IYU/WiR-wtpMhnI/AAAAAAAABio/spzguQcpyscqsgPR2-3FFfNKhzO06QZTwCLcBGAs/s500/Screen+Shot+2017-12-03+at+5.46.08+PM.png "Screen Shot 2017-12-03 at 5.46.08 PM.png")
 
-Then we use proximal subgradient descent to solve the problem. As a result, we were able to get a 63.19% accuracy for our prediction of the first column of psi y and 72.97% accuracy for our prediction of the second column. However when we combine the two column, the accuracy dropped down to 41.49%. 
+Then we use proximal subgradient descent to solve the problem. As a result, we were able to get a 62.67% accuracy for our prediction of the first column of $$/psi \psi y$$ and 70.47% accuracy for our prediction of the second column. When we combine the two columns, the accuracy dropped down to 41.40%. 
 
 ### 3.3 Decision Tree (Random Forest)
 
