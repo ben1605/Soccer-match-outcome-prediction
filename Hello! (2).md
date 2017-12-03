@@ -42,7 +42,7 @@ Bingzhe Cheng, bc638<br>
 	1.1 Introduction<br>
 	1.2 Objective   
     </ul> 
-  <li><a href="#2">Data Processing and Visualization</a></li>
+  <li><a href="#name_of_target2">Data Processing and Visualization</a></li>
     <ul>
     2.1 Data Description<br>
     2.2 Data Cleaning<br>
@@ -94,7 +94,7 @@ Our objective is to develop models base on the data we have to predict soccer ma
 
 -------------------
 
-**<a name="#2">2. Data Processing and Visualization</a>**
+**<a name="#name_of_target2">2. Data Processing and Visualization</a>**
 -----------
 
 ### 2.1 Data description
