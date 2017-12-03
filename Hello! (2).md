@@ -209,7 +209,7 @@ According to the p value, the first 3 coefficients are statistically significant
 
 One thing to notice about linear regression is that although some of the features might seem to be insignificant, it does not mean that the features are useless. It might be because that the features and the matches results do not have a linear relationship. Later, we will apply a nonlinear model to see if we can make a better prediction.
 
-### 3.2 Decision Tree (Random Forest)
+### 3.2 Multiclass Classification (Binary Encoding)
 In our problem, the outcome space has three classes, which are {1,-0,-1}. We decided to encode 1 as [1,-1], 0 as [-1,-1], and -1 as [-1,1]. Therefore, we transform our output space into the following:
 
 ![enter image description here](https://lh3.googleusercontent.com/-FFdkr3DNnvI/WiR4dU6-XhI/AAAAAAAABiQ/UaO0IUoljB8sizEhTjriQ6Bf2V5uBreugCLcBGAs/s800/Screen+Shot+2017-12-03+at+5.19.10+PM.png "Screen Shot 2017-12-03 at 5.19.10 PM.png")
@@ -223,10 +223,17 @@ In this graph, the x column represents the overall score of the home team and th
 
 
 We applied the following 3 different algorithms to solve for the two straight lines.(On a higher dimension with all other features involve) Since our data is sorted by date, we make the first 80% data our training set and the last 20% our prediction set. 
+#### 3.2.1 Perceptron Algorithm
+#### 3.2.2 Hinge Loss
 
-### 3.3 Multiclass Classification (Binary Encoding)
-#### 3.3.1 Perceptron Algorithm
-#### 3.3.2 Hinge Loss
+Because our data points are not linearly separable, we need to find other ways to solve linear classification problem. The idealist loss function for this problem is 0-1 miss-classification loss function but it is very hard to solve, so we use hinge loss to simulate 0-1 miss-classification loss function. For regularizer, we use shrinkage $||w||^2$. So our objective funtion is as:
+
+
+
+Then we use proximal subgradient descent to solve the problem. As a result, we were able to get a 63.19% accuracy for our prediction of the first column of psi y and 72.97% accuracy for our prediction of the second column. However when we combine the two column, the accuracy dropped down to 41.49%. 
+
+### 3.3 Decision Tree (Random Forest)
+
 
 **4. Conclusion**
 -
