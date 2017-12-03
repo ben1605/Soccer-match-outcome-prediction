@@ -73,9 +73,7 @@ Bingzhe Cheng, bc638<br>
 	  
 </ol>
 
-<p align="left">
-  <img src=https://pa1.narvii.com/5740/adb11fd58f840ef5b650eead44c043fb5edb027a_hq.gif height="300" width="440">
-</p>
+
 
 **<a name="name_of_target">1. Project Introduction</a>**
 ---------------
@@ -89,7 +87,6 @@ We are all fanatic soccer fans, and are interested in finding ways to predict th
 ### 1.2 Objective
 Our objective is to develop models base on the data we have to predict soccer match outcomes.
 
--------------------
 
 **<a name="name_of_target2">2. Data Processing and Visualization </a>**
 -----------
@@ -267,7 +264,9 @@ For our problem, we set the minimum number of data points in each box to be 15, 
 ----
 Among all the models we tried, Random Forest is the best model with a 56% accuracy. It may seem to be not very high, but given the complex nature of the problem, and the fact that it is a multiclass classification problem instead of a binary classification problem, 56% is a fairly high value. In our opinion, in order to make a better prediction, we need to find more useful features. For example, the head coaches’ information and the sport news that is related to predicting the match result. This would require application of NLP and further study of data gathering techniques. 
 
-
+<p align="left">
+  <img src=https://pa1.narvii.com/5740/adb11fd58f840ef5b650eead44c043fb5edb027a_hq.gif height="300" width="440">
+</p>
 
 
 
