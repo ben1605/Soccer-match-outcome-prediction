@@ -216,7 +216,6 @@ In our problem, the outcome space has three classes, which are {1,-0,-1}. We dec
 ![enter image description here](https://lh3.googleusercontent.com/-gIcCQu3nQUA/WiSFIGO2WpI/AAAAAAAABjA/BxGfkjPW5ywQSYqjxC45ZDIqAv-HtY4bgCLcBGAs/s200/Picture2.png "Picture2.png")
 
 Essentially, we transform our multiclass classification problem into two binary classification problems. The first column of phi y can be interpreted as: 1 if home team wins, -1 if home team does not win. The second column of phi y can be interpreted as: 1 if home team loses, -1 if home team does not loses. This interpretation can be visualized as the following graph:
-
 ![enter image description here](https://lh3.googleusercontent.com/-PYNTEALFDwg/WiR2hWI-NyI/AAAAAAAABh4/1VKRPNh44poH7xYNCKKzsUvEXZyhribKACLcBGAs/s800/scatter.png "scatter.png")
 
 
