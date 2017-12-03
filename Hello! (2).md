@@ -11,7 +11,7 @@
 </p>	
 <h2 align="center" color=""FF3300>
 	<font size="60" color="black">
-		<i> Final Project
+		<i> Final Project<br>
 	</font>
 	<font size="6" color="black">
     <b>Soccer Match Outcome Prediction
