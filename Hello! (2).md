@@ -3,7 +3,7 @@
 	<img style="float:center;" src="https://lh3.googleusercontent.com/-HJhKTYOsxsY/WiRQHnOCrAI/AAAAAAAABfA/ofzxnOohMCck7TRzctrzwWRWG3svq4qdACLcBGAs/s0/Screen+Shot+2017-12-03+at+1.45.35+AM.png")>
 </p>	
 <p align="center">
-	<h1>
+	<h1 align="center">
 	<font size="70" color="FF3300">
 		<b> ORIE 4741
 	</font>
