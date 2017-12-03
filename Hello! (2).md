@@ -42,7 +42,7 @@ Bingzhe Cheng, bc638<br>
 	1.1 Introduction<br>
 	1.2 Objective   
     </ul> 
-  <li><a href="#name_of_target2">Data Processing and Visualization</a></li>
+  <li><a href="#name_of_target2">Data Processing and Visualization</a>
     <ul>
     2.1 Data Description<br>
     2.2 Data Cleaning<br>
@@ -56,7 +56,7 @@ Bingzhe Cheng, bc638<br>
 		2.3.6. The Output Space<br>
 	</ul>	
     </ul>
-  
+  </li>
   <li><a href="#name_of_target3">Models</a>
 	  <ul>
 		3.1 Linear Regression<br>
@@ -69,7 +69,7 @@ Bingzhe Cheng, bc638<br>
 		3.3 Decision Tree (Random Forest)<br>	
 	  </ul>	  
   </li>
-  <li> Conclusion</li>
+  <li><a href="#name_of_target4">Conclusion</a></li>
 	  
 </ol>
 
@@ -94,7 +94,7 @@ Our objective is to develop models base on the data we have to predict soccer ma
 
 -------------------
 
-**<a name="#name_of_target2">2. Data Processing and Visualization</a>**
+**<a name="name_of_target2">2. Data Processing and Visualization </a>**
 -----------
 
 ### 2.1 Data description
@@ -251,7 +251,7 @@ It turned out that encoding is also not an efficient way of solving the problem.
 Another problem of encoding is that, although some of the models predicted the two columns of psi y pretty well, when combine those two predictions together, the correct points of the two predictions does not completely overlap with each other. Causing the final prediction to be poor. 
 
 
-**4. Conclusion**
+**<a name="name_of_target4">4. Conclusion</a>**
 -
 
 
