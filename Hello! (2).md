@@ -76,10 +76,7 @@ Bingzhe Cheng, bc638<br>
 <p align="left">
   <img src=https://pa1.narvii.com/5740/adb11fd58f840ef5b650eead44c043fb5edb027a_hq.gif height="300" width="440">
 </p>
-<p align="right">
-  <img src=https://pa1.narvii.com/5740/adb11fd58f840ef5b650eead44c043fb5edb027a_hq.gif height="300" width="440">
-</p>
-	
+
 **<a name="name_of_target">1. Project Introduction</a>**
 ---------------
 
