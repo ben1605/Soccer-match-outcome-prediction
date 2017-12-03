@@ -192,6 +192,7 @@ The betting odds reflect people’s anticipation of the result before a match ta
 
 #### 2.3.6. The output space
 The output space is the result of the matches. It is defined as follows:
+
 ![enter image description here](https://lh3.googleusercontent.com/-1vUJdhP8OMA/WiRyYCKSfLI/AAAAAAAABhc/Xu2KdBHSyhAZPU4KlfEqWE41cpYuIL4YACLcBGAs/s300/Screen+Shot+2017-12-03+at+4.49.18+PM.png "Screen Shot 2017-12-03 at 4.49.18 PM.png")
 
 **3.  Models**
