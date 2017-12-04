@@ -80,12 +80,12 @@ Bingzhe Cheng, bc638<br>
 
 ### **1.1 Introduction**
 
-Soccer is the most popular sport in the world. Every year thousands of professional soccer matches were played among the best soccer players in the world. We were often given the impression that soccer matches, unlike other sports, are hard to predict. It is not uncommon that an underdog team upsets a team with many superstars.
+Soccer is the most popular sport in the world. Every year thousands of professional soccer matches are played among the best soccer players in the world. We were often given the impression that soccer matches, unlike other sports, are hard to predict. It is not uncommon that an underdog team upsets a team with many superstars.
 
 We are all fanatic soccer fans, and are interested in finding ways to predict the outcomes of matches more precisely. We found datasets from the internet that contain detailed information about different teams and players and matches they played. We decided that with the help of big data, we can make more precise predictions on soccer match outcomes. 
 
 ### 1.2 Objective
-Our objective is to develop models base on the data we have to predict soccer match outcomes.
+Our objective is to develop models based on the data we have to predict soccer match outcomes.
 
 
 **<a name="name_of_target2">2. Data Processing and Visualization </a>**
@@ -122,12 +122,13 @@ http://sofifa.com/
 </p>
 
 ### 2.2 Data Cleaning
-We deleted the matches that miss one or more players’ id info. There are 4,605 of them out of 25,979. 
+We deleted the matches that miss one or more players’ id and players' position info. There are 4,618 of them out of 25,979. 
+
 ### 2.3 Data Processing
 Data processing is an important step in our project. 
 
 #### 2.3.1 Team Formation
-In our dataset, we found that there are 44 columns which indicate the position of players in each match. Specifically, each starting home player and away player has two columns indicating their X-coordinate and Y-coordinate in the field. We extracted the position of each players in each match from the dataset, and since there are a lot of duplicates, we removed all the repeating formations, and finally came up with 35 different formations. We plotted the following four formations as examples. 
+In our dataset, we found that there are 44 columns which indicate the position of players in each match. Specifically, each starting home player and away player have two columns indicating their X-coordinate and Y-coordinate in the field. We extracted the position of each players in each match from the dataset, and since there are a lot of duplicates, we removed all the repeating formations, and finally came up with 35 different formations. We plotted the following four formations as examples. 
 
 ![enter image description here](https://lh3.googleusercontent.com/Iy65Hu5nRZf88FkE_idmD6RQI0JWMMNyfJzYsC02ZOVLMeuae-3bGGgIK0Z448vV_rs1bwWBF9W7=s350 "formation1.png") ![enter image description here](https://lh3.googleusercontent.com/dbzUCHq208zhwtqtos4eqc5_balQOQGizDmePR0FJ14PpSH7oeJYoQ7OhuF63PkSGlV-8LTuVZuh=s350 "formation2.png")
 
@@ -140,7 +141,7 @@ In our dataset, we found that there are 44 columns which indicate the position o
 </p>
 	
 
-These graphs are some examples of commonly used formations. As shown in these graphs, there are generally four levels of players in each team, where the orange points represent forwards, red points represent midfields, blue points represent defenders, and green points represent goalkeepers. A formation of a team is determined by the number of forwards, midfielders, and defenders, and our goal is to transform the formation information into features for our project. Another thing needs to mention was that forwards and defenders are always in the same line (Y-coordinate), which made it more convenient to count their numbers, and by subtracting their sum from ten, we got the number of midfielders in each match. This is how we obtain the formation information from players’ position. 
+These graphs are some examples of commonly used formations. As shown in these graphs, there are generally four levels of players in each team, where the orange points represent forwards, red points represent midfielders, blue points represent defenders, and green points represent goalkeepers. A formation of a team is determined by the number of forwards, midfielders, and defenders, and our goal is to transform the formation information into features for our project. Another thing needs to mention was that forwards and defenders are always in the same line (Y-coordinate), which made it more convenient to count their numbers, and by subtracting their sum from ten, we got the number of midfielders in each match. This is how we obtain the formation information from players’ position. 
 	
 	
 We then added four columns of features to our data, they are: the number of forwards in the home team and away team, the number of defenders in the home team and away team. We left out the number of goalkeepers because it is always one. We left out the number of mid-fields to avoid collinearity.  
@@ -203,26 +204,26 @@ Since our output space is {-1,0,1} and bigger number indicates that the home tea
 
 ![enter image description here](https://lh3.googleusercontent.com/-KzBrekgpQ1E/WiRli5jHRJI/AAAAAAAABhI/KVkPJtXa92I2dGAEeimmSPatoEMbPKuQgCLcBGAs/s800/Screen+Shot+2017-12-03+at+3.58.19+PM.png "Screen Shot 2017-12-03 at 3.58.19 PM.png")
 
-where x1 is home team overall rating, x2 is away team overall rating, x3 is betting odds, x4 and x5 are home team’s number of defenders and forwards, x6 and x7 are away team’s number of defenders and forwards, x8 and x9 are home team and away team’s player rating variance, x10 and x11 are the winning rate and losing rate of the home team according to the historical head to head record. 
+where x1 is home team's overall rating, x2 is away team's overall rating, x3 is the betting odds, x4 and x5 are home team’s number of defenders and forwards, x6 and x7 are away team’s number of defenders and forwards, x8 and x9 are home team and away team’s player rating variance, x10 and x11 are the winning rate and losing rate of the home team according to the historical head to head record. 
 
-According to the p value, the first 3 coefficients are statistically significant. This is as expected. Besides home team’s number of defenders, the team’s formation does not seem to be very important. for the player’s rating variance x8 and x9, it is surprising that a higher variance actually contributes to the team’s match performance, it is opposite to what we hypothesized. It is also surprising that the historical head to head record is insignificant. One possible cause might be that the available data is not big enough for our regression to be meaningful.
+According to the p value, the first 3 coefficients are statistically significant. This is as expected. Besides home team’s number of defenders, the team’s formation does not seem to be very important. For the player’s rating variance x8 and x9, it is surprising that a higher variance actually contributes to the team’s match performance, which is opposite to what we hypothesized. It is also surprising that the historical head to head record is insignificant. One possible cause might be that the available data is not big enough for our regression to be meaningful.
 
 
-One thing to notice about linear regression is that although some of the features might seem to be insignificant, it does not mean that the features are useless. It might be because that the features and the matches results do not have a linear relationship. Later, we will apply a nonlinear model to see if we can make a better prediction.
+One thing to notice about linear regression is that although sbyome of the features might seem to be insignificant, it does not mean that the features are useless. It might be caused by that the features and the matches results do not have a linear relationship. Later, we will apply a nonlinear model to see if we can make a better prediction.
 
 ### 3.2 Multiclass Classification (Binary Encoding)
-In our problem, the outcome space has three classes, which are {1,-0,-1}. We decided to encode 1 as [1,-1], 0 as [-1,-1], and -1 as [-1,1]. Therefore, we transform our output space into the following:
+In our problem, the outcome space has three classes, which are {1,-0,-1}. We decided to encode 1 as [1,-1], 0 as [-1,-1], and -1 as [-1,1]. Therefore, we transformed our output space into the following:
 
 ![enter image description here](https://lh3.googleusercontent.com/-gIcCQu3nQUA/WiSFIGO2WpI/AAAAAAAABjA/BxGfkjPW5ywQSYqjxC45ZDIqAv-HtY4bgCLcBGAs/s200/Picture2.png "Picture2.png")
 
-Essentially, we transform our multiclass classification problem into two binary classification problems. The first column of phi y can be interpreted as: 1 if home team wins, -1 if home team does not win. The second column of phi y can be interpreted as: 1 if home team loses, -1 if home team does not loses. This interpretation can be visualized as the following graph:
+Essentially, we transformed our multiclass classification problem into two binary classification problems. The first column of psi y can be interpreted as: 1 if home team wins, -1 if home team does not win. The second column of phi y can be interpreted as: 1 if home team loses, -1 if home team does not lose. This interpretation can be visualized as the following graph:
 ![enter image description here](https://lh3.googleusercontent.com/-PYNTEALFDwg/WiR2hWI-NyI/AAAAAAAABh4/1VKRPNh44poH7xYNCKKzsUvEXZyhribKACLcBGAs/s800/scatter.png "scatter.png")
 
 
 In this graph, the x column represents the overall score of the home team and the y column represents the overall score of the away team. As we expected, the winning points are more towards the bottom right of the graph, the losing points are more towards the top left, and the drawing points are in the middle. The two lines represent the solutions to our problem. The bottom right line solves the first column of psi y and the top left line solves the second column of psi y. 
 
 
-We applied the following 3 different algorithms to solve for the two straight lines.(On a higher dimension with all other features involve) Since our data is sorted by date, we make the first 80% data our training set and the last 20% our prediction set. 
+We applied the following 3 different algorithms to solve for the two straight lines.(On a higher dimension with all other features involved) Since our data is sorted by date, we made the first 80% data to be our training set and the last 20% to be our prediction set. 
 
 
 One problem with encoding is that if our final prediction turn out to be [1,1], it does not have a meaningful representation. We decided to assign them to draw because those nonsense region is still in the middle of the graph.
@@ -230,34 +231,35 @@ One problem with encoding is that if our final prediction turn out to be [1,1], 
 
 #### 3.2.1 Perceptron Algorithm
 
-Since the problems are clearly not linear separable and there are so many outliers in out data. Perceptron Algorithm turned out not to be a good approach. We were only able to get a 47.41% accuracy for our prediction of the first column of psi y and 63.30% accuracy for our prediction of the second column. When we combine the two column,the accuracy dropped down to 38.40%. It is still better than 33.3%, which is the probability if we guess randomly, but not by a lot. 
+Since the problems are clearly not linearly separable and there are so many outliers in our data, Perceptron Algorithm turned out not to be a good approach. We were only able to get a 47.41% accuracy for our prediction of the first column of psi y and 63.30% accuracy for our prediction of the second column. When we combined the two column,the accuracy dropped down to 38.40%. It is still better than 33.3%, which is the probability if we guess randomly, but not by a lot. 
 
 #### 3.2.2 Hinge Loss
 
-Because our data points are not linearly separable, we need to find other ways to solve linear classification problem. The idealist loss function for this problem is 0-1 miss-classification loss function but it is very hard to solve, so we use hinge loss to simulate 0-1 miss-classification loss function. For regularizer, we use shrinkage $||w||^2$. So our objective funtion is as:
+Because our data points are not linearly separable, we needed to find other ways to solve linear classification problem. The idealist loss function for this problem is 0-1 misclassification loss function, but it is very hard to solve, so we used hinge loss to simulate 0-1 misclassification loss function. For regularizer, we used shrinkage $||w||^2$. So our objective funtion is as follows:
 
 ![enter image description here](https://lh3.googleusercontent.com/-4pmAdFztObI/WiSFWz7ySLI/AAAAAAAABjI/c1WY6ybzGwcBOmmG1cUOuhNki0iw5bDqgCLcBGAs/s500/Picture3.png "Picture3.png")
 
-Then we use proximal subgradient descent to solve the problem. As a result, we were able to get a 62.67% accuracy for our prediction of the first column of psi y and 70.47% accuracy for our prediction of the second column. When we combine the two columns, the accuracy dropped down to 41.40%. 
+Then we used proximal subgradient descent to solve the problem. As a result, we were able to get a 62.67% accuracy for our prediction of the first column of psi y and 70.47% accuracy for our prediction of the second column. When we combined the two columns, the accuracy dropped down to 41.40%. 
 
 #### 3.2.3 Decision Tree (Random Forest)
-Finally, we decided to give random forest a try. Our prediction, in this case, is not separated by 2 lines. We wish that we can use decision tree to capture the nonlinearity of the data. 
+Finally, we decided to give random forest a try. Our prediction, in this case, is not separated by 2 lines. We wished that we could use decision tree to capture the nonlinearity of the data. 
 
 
 Unfortunately, the result is almost the same as the hinge loss. Our prediction of the first column has a 63.19% accuracy, our prediction of the second column has a 73.06% accuracy, and our prediction of the final result has a 43.15% accuracy.
 It turned out that encoding is also not an efficient way of solving the problem. From the above graph, we can see that a lot of the winning, drawing, and losing dots are mixed together. It is almost impossible to separate those points with only 2 straight lines. 
 
+Another problem of encoding was that, although some of the models predicted the two columns of psi y pretty well, when combining those two predictions together, the correct points of the two predictions did not completely overlap with each other, causing the final prediction to be poor. 
+
 ### 3.3 Decision Tree (Random Forest)
-Another problem of encoding is that, although some of the models predicted the two columns of psi y pretty well, when combine those two predictions together, the correct points of the two predictions does not completely overlap with each other. Causing the final prediction to be poor. 
 
 We then decided to apply random forest directly to our problem without encoding. This turned out to be a better approach. 
-In Decision Tree Method, each data point has 12 features. Therefore in each depth of tree, the algorithm will make a binary split of all data points according to one feature. At the bottom of the tree, the data points will be splitted into 2^n boxes. We define the value of each box to be the mode of the data points in the box. Then we use this tree to predict our test data points. If one data point is in a box, then we predict this data point to be the value of this box. 
+In Decision Tree Method, each data point has 12 features. Therefore in each depth of tree, the algorithm will make a binary split of all data points according to one feature. At the bottom of the tree, the data points will be splitted into 2^n boxes. We defined the value of each box to be the mode of the data points in the box. Then we used this tree to predict our test data points. If one data point is in a box, then we predicted this data point to be the value of this box. 
 
 
-To decrease the variance of estimates, we use a random forest rather than a single decision tree. For example, if we have M data points and N features, we randomly choose 2/3M data points with replacement for B times to form B bags. Then for each bag, we choose P out of M features to form a decision tree. Thus we will have B decision trees. To predict a data point, we calculate the average predictions across B decision tress.
+To decrease the variance of estimates, we used a random forest rather than a single decision tree. For example, if we have M data points and N features, we randomly chose 2/3 M data points with replacement for B times to form B bags. Then for each bag, we chose P out of M features to form a decision tree. Thus we will have B decision trees. To predict a data point, we calculated the average predictions across B decision tress.
 
 
-For our problem, we set the minimum number of data points in each box to be 15, the maximal depth of each tree to be 10 and we use Gini to be the criterion. Solved by random forest, the final result has a 56.41% accuracy. 
+For our problem, we set the minimum number of data points in each box to be 15, the maximal depth of each tree to be 10 and we used Gini to be the criterion. Solving with Random Forest algorithm, the final accuracy turned out to be 56.41%. 
 
 **<a name="name_of_target4">4. Conclusion</a>**
 ----
